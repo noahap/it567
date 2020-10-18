@@ -4,7 +4,31 @@ Assignments for IT567 - pentesting
 ## Assignment 3
 ### see file it567_a3.py
 
-Note: This has only been tested to work on Mac with Python 2.7.16. 
+Note: This has only been tested to work on Mac with Python 2.7.16.
+
+### This code provides the following functionalities:
+1. Allow command-line switches to specify a host and port. 
+2. Present a simple response to the user. 
+3. Allow more than one host to be scanned – 10 points maximum. 
+	- Reading a text file of host IP’s or reading a range from the command line
+		- Doing both
+	- Allowing different ways to specify hosts (subnet mask and range) – 5 points. 
+
+4. Allow multiple ports to be specified
+
+5. Use of more than one protocol 
+  - TCP
+  - UDP
+  - ICMP
+
+6. Traceroute
+
+7. User experience results – PDF report
+
+8. GUI tool
+
+9. Other ideas or concepts not mentioned
+  - Multithreading (speeds up port scanning)
 ```
 python it567_a3.py --help
 Usage: it567_a3.py [OPTIONS]
