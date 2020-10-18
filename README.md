@@ -25,7 +25,9 @@ Options:
   -icmp         Do a ping scan (ICMP).
   -f PATH       Read targets from a text file (one IP address per line).
   -traceroute   Run a traceroute for each target.
-  -gui          Launch the gui instead of filling out all the flags.
+  -gui          Launch the gui instead of filling out all the flags. This
+                doesn't have any functionality yet.
+
   -expedite     Run this scan with multithreading to speed it up.  Traceroute
                 and ICMP are disabled for this flag.
 
