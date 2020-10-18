@@ -4,6 +4,7 @@ Assignments for IT567 - pentesting
 ## Assignment 3
 ### see file it567_a3.py
 
+Note: This has only been tested to work on Mac with Python 2.7.16. 
 ```
 python it567_a3.py --help
 Usage: it567_a3.py [OPTIONS]
