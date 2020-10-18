@@ -9,10 +9,10 @@ Note: This has only been tested to work on Mac with Python 2.7.16.
 ### This code provides the following functionalities:
 1. Allow command-line switches to specify a host and port. 
 2. Present a simple response to the user. 
-3. Allow more than one host to be scanned – 10 points maximum. 
+3. Allow more than one host to be scanned
 	- Reading a text file of host IP’s or reading a range from the command line
-		- Doing both
-	- Allowing different ways to specify hosts (subnet mask and range) – 5 points. 
+		- Does both
+	- Allowing different ways to specify hosts (subnet mask and range)
 
 4. Allow multiple ports to be specified
 
