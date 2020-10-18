@@ -8,6 +8,7 @@ from scapy.all import *
 from fpdf import FPDF
 import thread
 import time
+import tkinter
 
 @click.command()
 @click.option('-t', help='''Specify target(s) you want to scan (by IPv4 Address only).\n
@@ -20,14 +21,12 @@ import time
 @click.option('-icmp', help='Do a ping scan (ICMP).', flag_value='True', default=False, type=bool)
 @click.option('-f', help='Read targets from a text file (one IP address per line).', type=click.Path(exists=True))
 @click.option('-traceroute', help='Run a traceroute for each target.', flag_value='True', default=False, type=bool)
-@click.option('-gui', help="Launch the gui instead of filling out all the flags.", flag_value='True', default=False, type=bool)
+@click.option('-gui', help='''Launch the gui instead of filling out all the flags.
+                              This doesn't have any functionality yet.''', flag_value='True', default=False, type=bool)
 @click.option('-expedite', help='''Run this scan with multithreading to speed it up. 
                                    Traceroute and ICMP are disabled for this flag.''', flag_value='True', default=False, type=bool)
 @click.option('-export', help='''Export your output to a PDF. Specify the name of your file.\n
                                   Example: -export my_file.pdf''')
-
-#TODO: Add GUI or Web Management Tool (10 points)
-#TODO: Post to Github and turn it in
 
 def main(t, p_tcp, p_udp, icmp, f, traceroute, gui, expedite, export):
     pdf = FPDF()
@@ -35,6 +34,15 @@ def main(t, p_tcp, p_udp, icmp, f, traceroute, gui, expedite, export):
     pdf.set_font('Times', '', 12) #Set the font to Times New Roman, size 12
     output = []
     output.append("Noah's Port Scanner Results\n")
+    if gui: #launch the gui
+        app = tkinter.Tk()
+        app.title("Noah's Port Scanner")
+        startScanButton = tkinter.Button(text="Run")
+        startScanButton.place(x=90,y=125)
+        welcomeMessage = tkinter.Label(text="This actually doesn't do anything yet.")
+        welcomeMessage.place(x=0,y=0)
+        app.geometry("250x150")
+        app.mainloop()
     if t is not None:
         target = t.encode('ascii', 'ignore') #switch from unicode to ascii
     if f is not None:
