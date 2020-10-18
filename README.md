@@ -40,7 +40,7 @@ Options:
                 
                 For a range, do this: 192.168.172.1-192.168.172.5
                 
-                For a single target, do this: 192.168.172.0
+                For a single target, do this: 192.168.172.42
                 
                 For a list of targets not in these formats, please use the -f
                 option.
